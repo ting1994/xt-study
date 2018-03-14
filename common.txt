@@ -9,3 +9,9 @@
 5.git checkout -b 分支号(feature开头) 表示新建一个分支。
 
 6.git checkout 分支号 切换到指定分支。
+
+7.git commit -m "本地提交的信息"  提交暂存区中的所有修改。
+
+8.git push origin 分支号(feature-new) 推送分支已提交的全部内容到远端。
+
+9.git add -A 将本地所有修改添加到git暂存区中。
