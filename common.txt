@@ -1,0 +1,11 @@
+1.git status 查看git分支状态(文件的改动情况)
+
+2.git diff 查看本地文件和暂存区的差异。
+
+3.git branch 查看当前所在分支。
+
+4.gif diff 分支号(master) 查看当前分支和指定分支的差异。
+
+5.git checkout -b 分支号(feature开头) 表示新建一个分支。
+
+6.git checkout 分支号 切换到指定分支。
