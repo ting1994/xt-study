@@ -1,4 +1,4 @@
-1.git status 查看git分支状态(文件的改动情况)
+﻿1.git status 查看git分支状态(文件的改动情况)
 
 2.git diff 查看本地文件和暂存区的差异。
 
@@ -10,8 +10,10 @@
 
 6.git checkout 分支号 切换到指定分支。
 
-7.git commit -m "本地提交的信息"  提交暂存区中的所有修改。
+7.git add -A 将本地所有修改添加到git暂存区中。
 
-8.git push origin 分支号(feature-new) 推送分支已提交的全部内容到远端。
+8.git commit -m "本地提交的信息"  提交暂存区中的所有修改。
 
-9.git add -A 将本地所有修改添加到git暂存区中。
+9.git push origin 分支号(feature-new) 推送分支已提交的全部内容到远端。
+
+
