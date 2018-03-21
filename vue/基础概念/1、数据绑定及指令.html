@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			电影名称：{{moveName}}
+			上映日期：{{moveTime}}
+			
+			<p>{{ hoverTime() }}电影</p>
+			
+			<p v-bind:title="moveTime">鼠标放上去显示电影时间</p>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				moveName:'红海行动',
+				moveTime:'2018'
+			},
+			methods:{
+				hoverTime:function(){
+					return (this.moveTime>2017)?'新':'旧'
+				}
+			}
+		})
+	</script>
+</html>
