@@ -1,17 +1,33 @@
-1.git status 查看git分支状态(文件的改动情况)
+﻿1、cd 2018(本地地址)  进入本地目录。 F:(进入盘)
 
-2.git diff 查看本地文件和暂存区的差异。
+2、git clone https://github.com/ting1994/xt-study.git(git地址https开头) 克隆git到本地。
 
-3.git branch 查看当前所在分支。
+3、git init 建立一个仓库。
 
-4.gif diff 分支号(master) 查看当前分支和指定分支的差异。
+4、git add -A 将本地所有修改添加到git暂存区中。
 
-5.git checkout -b 分支号(feature开头) 表示新建一个分支。
+5、git commit -m "本地提交的信息"  提交暂存区中的所有修改。
 
-6.git checkout 分支号 切换到指定分支。
+6、git push origin 分支号(feature-new) 推送分支已提交的全部内容到远端。
 
-7.git commit -m "本地提交的信息"  提交暂存区中的所有修改。
+7、git status 查看git分支状态(文件的改动情况)
 
-8.git push origin 分支号(feature-new) 推送分支已提交的全部内容到远端。
+8、git diff 查看本地文件和暂存区的差异。
 
-9.git add -A 将本地所有修改添加到git暂存区中。
+9、git branch 查看当前所在分支。
+
+10、gif diff 分支号(master) 查看当前分支和指定分支的差异。
+
+11、git checkout -b 分支号(feature开头) 表示新建一个分支。
+
+12、git checkout 分支号 切换到指定分支。
+
+13、git log  显示从最近到最远的提交日志 
+
+14、git remote  查看远程库的信息 
+
+15、git remote -v 显示更为详细的信息
+
+
+
+

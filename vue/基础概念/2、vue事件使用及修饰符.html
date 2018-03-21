@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>		
+	</head>
+	<body>
+		<div id="app">
+			<!--------------------事件--------------------->
+			<p>{{age}}</p>
+			<button v-on:click="reduce()">自减</button>
+			<button @click="add()">自加</button></br></br>
+			
+			<div v-on:mousemove="updataxy">
+				<span v-on:mousemove.stop="">{{x}},{{y}}</span>
+			</div></br>
+			
+			<!--------------------修饰符--------------------->
+			<a v-bind:href="website" v-on:click.prevent="alert">点击跳转</a></br>
+			<!-- 添加事件监听器时使用事件捕获模式 -->
+			<!-- 即元素自身触发的事件先在此处处理，然后才交由内部元素进行处理 -->
+			<a v-bind:href="website" v-on:click.capture="alert">点击跳转</a></br>
+			<!--修饰符可以串联-->
+			<a v-bind:href="website" v-on:click.stop.prevent="alert">点击跳转</a></br>
+			<!--.self修饰符-->
+			<!--<div v-on:click="add">
+				obj1
+				<div v-on:click.self="add">
+					obj2
+					<div v-on:click="add">
+						obj3
+						<div v-on:click="add">
+							obj4
+						</div>
+					</div>
+				</div>
+			</div>-->
+			
+			<button v-on:click.once="alert">点击</button>
+			
+			<div>
+				<h1>键盘 EventS</h1>
+				<label>姓名：</label>
+				<!--按enter键触发事件-->
+				<input type="text" v-on:keyup.enter="logName" />
+				<label>年龄：</label>
+				<!--同时按alt+enter键触发事件-->
+				<input type="text" v-on:keyup.alt.enter="logAge" />
+			</div>
+		</div>
+	</body>
+	<script>
+		/* 一、vue事件
+		 * 指令(属性绑定) v-bind:==>动态地绑定一个或多个特性   v-html==>html插入......(v-bind:==:)
+		 * v-on:click 单机  v-on:dblclick 双击  v-on:mousemove 鼠标指针移动事件......(v-on:click==@click)
+		 * 
+		 * 二、修饰符
+		 * 1)事件修饰符
+		 * .stop 阻止单击事件继续传播
+		 * .prevent 提交事件不再重载页面
+		 * .capture 添加事件监听器时使用事件捕获模式(即元素自身触发的事件先在此处处理，然后才交由内部元素进行处理)
+		 * .self 只当在 event.target 是当前元素自身时触发处理函数(即事件不是从内部元素触发的)
+		 * .once 点击事件将只会触发一次
+		 * 
+		 * 2)按键修饰符
+		 * .enter
+		 * .tab
+		 * .delete (捕获“删除”和“退格”键)
+		 * .esc
+		 * .space
+		 * .up
+		 * .down
+		 * .left
+		 * .right
+		   
+		   
+		 * */
+		new Vue({
+			el:'#app',
+			data:{
+				age:25,
+				
+				x:0,
+				y:0,
+				
+				website:'https://www.baidu.com/'
+				
+			},
+			methods:{
+				add:function(){
+					this.age++;
+				},
+				
+				reduce:function(){
+					this.age--;
+				},
+				
+				updataxy:function(event){
+					//console.log(event);
+					this.x=event.pageX;//offsetX offsetY相对于当前容器的左上角(0,0)来说
+					this.y=event.pageY;
+				},
+				
+				alert:function(){
+					alert('我是.prevent')
+				},
+				
+				logName:function(){
+					console.log('正在输入名字！');
+				},
+				logAge:function(){
+					console.log('正在输入年龄！');
+				}
+				
+			}
+		})
+	</script>
+</html>

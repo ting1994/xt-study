@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			电影名称：{{moveName}}
+			上映日期：{{moveTime}}
+			
+			<p>{{ hoverTime() }}电影</p>
+			
+			<p v-bind:title="moveTime">鼠标放上去显示电影时间</p>
+			
+			<div v-html="html"></div>
+		</div>
+	</body>
+	<script>
+		/* 一、指令
+		 *  v-text 与 {{name}}效果一样
+		 *  v-html
+		 *  v-show 根据表达式之真假值，切换元素的 display CSS 属性
+		 *  v-if   根据表达式的值的真假条件渲染元素
+		 *  v-else 前一兄弟元素必须有 v-if 或 v-else-if
+		 *  v-for  基于源数据多次渲染元素或模板块
+		 *  v-on   绑定事件监听器
+					<!-- 方法处理器 -->
+			        <button v-on:click="doThis"></button>
+			        <!-- 缩写 -->
+					<button @click="doThis"></button>
+		 *  v-bind 动态地绑定一个或多个特性，或一个组件 prop 到表达式
+					<!-- 绑定一个属性 -->
+					<img v-bind:src="imageSrc">
+					<!-- 缩写 -->
+					<img :src="imageSrc">
+		 *  v-model 在表单控件或者组件上创建双向绑定 
+		                                    限制：<input>、<select>、<textarea>、components
+		 *  v-pre   跳过这个元素和它的子元素的编译过程
+		 *  v-cloak 这个指令保持在元素上直到关联实例结束编译
+		 *  v-once  只渲染元素和组件一次
+		 * */
+		
+		new Vue({
+			el: '#app',
+			data: {
+				moveName:'红海行动',
+				moveTime:'2018',
+				
+				html:"<a href='https://www.baidu.com/'>点击一下</a>"
+			},
+			methods:{
+				hoverTime:function(){
+					return (this.moveTime>2017)?'新':'旧'
+				}
+			}
+		})
+	</script>
+</html>
