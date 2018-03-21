@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>				
+	</head>
+	<body>
+		<div id="app">
+			<!-------------双向数据绑定-------------->
+			<!--第一种方法 v-model-->
+			<div>
+				姓名
+				<input v-model="name" type="text"/>
+				<span>{{name}}</span>
+			</div>
+			
+			<!--第二种方法  $refs-->
+			<div>
+				姓名
+				<input type="text" ref='name1' v-on:keyup="upName"/>
+				<span>{{name1}}</span>
+			</div>
+			
+			<!-------------条件渲染-------------->
+			<button v-on:click="error=!error">error</button>
+			<button v-on:click="success=!success">success</button>
+			<!--v-if 不占位-->
+			<p v-if="error">错误 404</p>
+			<p v-else-if="success">成功 200</p>
+			<!--v-show 占位-->
+			<!--<p v-show="error">错误 404</p>
+			<p v-show="success">成功 200</p>-->
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#app',
+			data:{
+				name:'',				
+				name1:'',
+				
+				error:false,
+				success:false
+			},
+			methods:{
+				upName(){
+					this.name1 = this.$refs.name1.value;
+				}
+			}
+		})
+	</script>
+</html>
