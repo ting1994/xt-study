@@ -1,0 +1,28 @@
+.Nosubmint .mint-cell-wrapper{
+	padding: 0 .3rem;
+	border-bottom: 1px solid #eee;
+}
+.Nosubmint{
+	color: #35b46f;
+}
+.Nosubmint .mint-button{
+	background: #5EC671;
+}
+ .Nosubmint .mint-cell-value{
+ 	/*margin-right: .3rem;*/
+ 	font-size: .28rem;
+ }
+  .Nosubmint .mint-cell-text{
+  	font-size: .28rem;
+  }
+  .Nosubmint .mint-cell-title{
+  	width: 60px;
+  }
+	.header_grop .mint-swipe-indicator {
+		background: #fff;
+		opacity: .6;
+	}
+	.header_grop .mint-swipe-indicator.is-active {
+		background: #25be33;
+		/*border-color: #fff;*/
+	}

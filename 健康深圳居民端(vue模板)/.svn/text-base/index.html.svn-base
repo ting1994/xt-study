@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>健康深圳</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./static/css/reset.css"/>
+    <link rel="stylesheet" href="./static/css/style.css"/>
+    <!--百度控件样式-->
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" /> 
+</head>
+
+<body>
+    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>        
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=auV80WYkTfNXVtziFnqyunnsYSf0iTAP"></script>    
+    <!--百度控件-->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <div id="app"></div>
+    <script src="./static/js/vendor.dll.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js "></script>
+    <!-- <script src="https://api.map.baidu.com/api?v=2.0&ak=dPX2gDtzVbwDyByhiOvskjNxsECGGoEO"></script> -->
+</body>
+
+</html>
